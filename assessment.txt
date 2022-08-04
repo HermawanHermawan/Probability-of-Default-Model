@@ -1,0 +1,10 @@
+### ROC AND AUC CURVE
+To assess the quality of the model, we will examine the ROC Curve(Receiver Operating Characteristic Curve) and AUC Curve(Area Under The Curve).
+The former is a graph showing the performance of a classification model at all classification thresholds. 
+This curve plot two parameters, namely TPR(True Positive Rate) and FPR(False Positive Rate). 
+A ROC curve plots TPR against FPR at different classification thresholds. 
+Lowering the classification threshold classifies more items as positive, thus increasing both False Positive and True Positives. 
+To compute the points in a ROC curve, we would evaluate a logistic regression model many times with different classification thresholds.
+This would be however inefficient. Fortunately, there is an efficient, sorting-based algorithm that can provide this information for us, called AUC. 
+AUC measures the entire two-dimensional area underneath the entire ROC Curve from (0,0) and (1,1). 
+The AUC for predicting by chance is 50%. Accordingly, we can calculate AUC for the model as well. In our case, it is about 72% signifying a fair result.
